@@ -1,0 +1,42 @@
+# General
+.DS_Store
+*.log
+*.swp
+*.swo
+*~
+
+# Frontend (Next.js)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/build/
+frontend/.env*.local
+frontend/.vercel
+frontend/.turbo
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# GraphQL Server (Go)
+graphql-server/tmp/
+graphql-server/*.exe
+graphql-server/*.exe~
+graphql-server/*.dll
+graphql-server/*.so
+graphql-server/*.dylib
+graphql-server/*.test
+graphql-server/*.out
+graphql-server/vendor/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+next-env.d.ts
