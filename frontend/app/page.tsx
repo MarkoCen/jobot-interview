@@ -59,7 +59,6 @@ function PingPage() {
     onData: ({ data }) => {
       if (data?.data?.ping) {
         setLastPing(data.data.ping);
-        addOperation('subscription', 'PingSubscription', data.data.ping);
       }
     },
     onError: (error) => {
@@ -94,12 +93,10 @@ function PingPage() {
         </h1>
 
         {/* Current Ping Display */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
-            Last Ping Timestamp
-          </h2>
-          <div className="text-3xl font-mono text-indigo-600 dark:text-indigo-400">
-            {lastPing ? new Date(lastPing).toLocaleString() : 'Waiting for ping...'}
+        <div className="bg-black text-white rounded p-3 mb-8 inline-block">
+          <div className="text-sm mb-1">Last Ping:</div>
+          <div className="font-mono">
+            {lastPing ? new Date(lastPing).toISOString() : 'Waiting for ping...'}
           </div>
         </div>
 
